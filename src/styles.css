@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=League+Spartan:wght@100..900&family=Parisienne&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../public/HelveticaNeueMedium.otf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #030302;
+  font-size: 14px;
+  background-color: #f4f4f5;
+}
+
+.cursive-font {
+  font-family: "Parisienne", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.roman-font {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-optical-sizing: auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.roman-font-without-shadow {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 600;
+  font-optical-sizing: auto;
+}
+
+.roman-font-italic {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-optical-sizing: auto;
+  font-style: italic;
+}
+
+.helvetica-font {
+  font-family: "Helvetica", sans-serif;
+}

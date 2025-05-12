@@ -1,12 +1,464 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import Aos, * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Portfolio';
+  services = [
+    {
+      name: 'Custom Web Development',
+      alt: 'custom-web-development',
+      image: 'customwebdevelopment1.jpg',
+      description: 'Fast, secure websites built for hospitals, clinics, and telehealth platforms.'
+    },
+    {
+      name: 'HIPAA-Compliant Web Design',
+      alt: 'hippa-compliant-web-design',
+      image: 'hippacomplaint1.jpg',
+      description: 'UX/UI focused on patient experience and compliance.'
+    },
+    {
+      name: 'Medical Content Writing',
+      alt: 'medical-content-writing',
+      image: 'contentcreation2.jpg',
+      description: 'Accurate, SEO-optimized articles and blogs for healthcare providers and platforms.'
+    },
+    {
+      name: 'HealthTech Product Strategy',
+      alt: 'healthtech-product-strategy',
+      image: 'strategicplanning2.jpg',
+      description: 'Helping you build patient portals, EHR/EMR tools, or wellness apps.'
+    },
+    {
+      name: 'Healthcare Branding',  
+      alt: 'healthcare-branding',
+      image: 'branding1.jpg',
+      description: 'Logos, visual identity, and messaging for health startups and clinics.'
+    },
+    {
+      name: 'SEO Optimization',
+      alt: 'seo-optimization',
+      image: 'seo1.jpg',  
+      description: 'Ensure your medical website ranks well and loads fast with healthcare-specific SEO strategies and performance tuning.'
+    }
+  ];
+
+  ngOnInit() {
+    Aos.init({
+      duration: 1000,
+    });
+  }
 }
+
+// <!-- Header -->
+// <div class="py-3 px-10 md:px-34 flex justify-between items-center backdrop-blur-md shadow-md fixed top-0 left-0 right-0 z-10">
+//   <div class="text-xl cursive-font text-[1.5rem]">
+//     Rahul
+//   </div>
+//   <div>
+//     <ul class="flex gap-8">
+//       <li>
+//         <a href="#Home">Home</a>
+//       </li>
+//       <li>
+//         <a href="#Services">Services</a>
+//       </li>
+//       <li>
+//         <a href="#Projects">Projects</a>
+//       </li>
+//       <li>
+//         <a href="#Testimonials">Testimonials</a>
+//       </li>
+//       <li>
+//         <a href="#Blogs">Blogs</a>
+//       </li>
+//       <li>
+//         <a href="#Contact">Contact</a>
+//       </li>
+//     </ul>
+//   </div>
+// </div>
+
+// <!-- Hero Section -->
+// <div id="Home" class="px-10 md:px-34 pt-30 pb-15 h-screen grid grid-cols-12">
+//   <div class="col-span-8 pr-10 flex flex-col justify-between">
+    
+//     <div class="text-[7rem] roman-font leading-none" data-aos="fade-right">
+//       <div class="">Rahul</div>
+//       <div class="">Vishwakarma</div>
+//     </div>
+    
+//     <div class="flex items-center">
+//       <div class="w-[50%] text-[0.9rem] flex gap-4">
+//         <div data-aos="flip-up">
+//           <a href="#Contact"><button class="button-animation bg-[#030302] text-white px-8 py-2 rounded-full font-bold">Contact Me</button></a>
+//         </div>
+//       </div>
+//       <div class="w-[50%] text-[0.9rem] text-end">
+//         Helping Healthcare Businesses Grow with Technology, Content & Design.
+//         I specialize in HIPAA-compliant solutions, engaging medical content, and user-friendly tools for clinics, startups, and healthcare professionals.
+//       </div>
+//     </div>
+    
+//     <div class="flex justify-between gap-10">
+//       <div class="grid grid-cols-3 gap-10">
+//         <div class="col-span-1 card-animation p-2 flex flex-col justify-center" data-aos="zoom-in-up">
+//           <div class="roman-font-italic text-[2.5rem]">
+//             Angular
+//           </div>
+//           <div>
+//             for clean, dynamic user interfaces
+//           </div>
+//         </div>
+//         <div class="col-span-1 card-animation p-2 flex flex-col justify-center" data-aos="zoom-in-up">
+//           <div class="roman-font-italic text-[2.5rem]">
+//             .NET Core
+//           </div>
+//           <div>
+//             for fast and secure APIs
+//           </div>
+//         </div>
+//         <div class="col-span-1 card-animation p-2 flex flex-col justify-center" data-aos="zoom-in-up">
+//           <div class="roman-font-italic text-[2.5rem]">
+//             SQL
+//           </div>
+//           <div>
+//             for efficient data handling
+//           </div>
+//         </div>
+//       </div>
+
+//       <div class="flex flex-col gap-2">
+//         <div class="button-animation">
+//           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
+//             <path d="M25,2C12.318,2,2,12.317,2,25s10.318,23,23,23s23-10.317,23-23S37.682,2,25,2z M18,35h-4V20h4V35z M16,17 c-1.105,0-2-0.895-2-2c0-1.105,0.895-2,2-2s2,0.895,2,2C18,16.105,17.105,17,16,17z M37,35h-4v-5v-2.5c0-1.925-1.575-3.5-3.5-3.5 S26,25.575,26,27.5V35h-4V20h4v1.816C27.168,20.694,28.752,20,30.5,20c3.59,0,6.5,2.91,6.5,6.5V35z"></path>
+//           </svg>
+//         </div>
+//         <div class="button-animation">
+//           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 24 24">
+//             <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"></path>
+//           </svg>
+//         </div>
+//         <div class="button-animation">
+//           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
+//             <path d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M36.237,20.524 c0.01,0.236,0.016,0.476,0.016,0.717C36.253,28.559,30.68,37,20.491,37c-3.128,0-6.041-0.917-8.491-2.489 c0.433,0.052,0.872,0.077,1.321,0.077c2.596,0,4.985-0.884,6.879-2.37c-2.424-0.044-4.468-1.649-5.175-3.847 c0.339,0.065,0.686,0.1,1.044,0.1c0.505,0,0.995-0.067,1.458-0.195c-2.532-0.511-4.441-2.747-4.441-5.432c0-0.024,0-0.047,0-0.07 c0.747,0.415,1.6,0.665,2.509,0.694c-1.488-0.995-2.464-2.689-2.464-4.611c0-1.015,0.272-1.966,0.749-2.786 c2.733,3.351,6.815,5.556,11.418,5.788c-0.095-0.406-0.145-0.828-0.145-1.262c0-3.059,2.48-5.539,5.54-5.539 c1.593,0,3.032,0.672,4.042,1.749c1.261-0.248,2.448-0.709,3.518-1.343c-0.413,1.292-1.292,2.378-2.437,3.064 c1.122-0.136,2.188-0.432,3.183-0.873C38.257,18.766,37.318,19.743,36.237,20.524z"></path>
+//         </svg>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+
+//   <div class="col-span-4 bg-[#fcb042] rounded-3xl overflow-hidden" data-aos="fade-left">
+//     <img src="profile.png" alt="profile" class="w-[100%] h-[100%] object-cover">
+//   </div>
+// </div>
+
+// <!-- Services -->
+// <div id="Services" class="">
+//   <div class="overflow-hidden">
+//     <div class="px-10 md:px-34 text-[7rem] roman-font text-end" data-aos="fade-left">
+//       Services
+//     </div>
+//   </div>
+
+//   <div class="px-10 md:px-34 h-10/12">
+//     <div class="grid grid-cols-3 grid-rows-2 gap-14">
+
+//       @for (item of services; track $index) {
+//         <div class="flex flex-col card-shadow bg-white border-[#0303022d] group" data-aos="zoom-in-up">
+//           <div class="relative h-80 col-span-1 overflow-hidden">
+//             <img src="{{item.image}}" alt="{{item.alt}}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+//           </div>
+//           <div class="pt-6 p-5">
+//             <h3 class="text-2xl font-bold mb-2 roman-font-without-shadow text-[2rem]">{{item.name}}</h3>
+//             <p class="text-sm">{{item.description}}</p>
+//           </div>
+//         </div>
+//       }
+
+//     </div>
+//   </div>
+// </div>
+
+// <!-- Projects -->
+// <div class="overflow-hidden">
+//   <div id="Projects" class="px-10 md:px-34 mt-16 text-[7rem] roman-font" data-aos="fade-right">
+//     Projects
+//   </div>
+// </div>
+// <div>
+//   <div class="px-10 md:px-34">
+//     <div class="grid grid-cols-2 gap-14">
+//       <div class="col-span-1 grid grid-cols-2 gap-2">
+//         <div class="col-span-1 h-60 bg-white overflow-hidden rounded-md">
+//           <img src="project1.jpg" alt="Project" class="object-cover">
+//         </div>
+//         <div class="col-span-1 h-60 bg-white overflow-hidden rounded-md">
+//           <img src="project2.jpg" alt="Project" class="object-cover">
+//         </div>
+//         <div class="col-span-2 h-min flex flex-wrap justify-evenly" data-aos="zoom-up">
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">Angular</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">.NET Core</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">PostgreSQL</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">TailwindCSS</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">Auth0</div>
+//         </div>
+//       </div>
+//       <div data-aos="fade-left">
+//         <div class="col-span-1 rounded-md p-8 portfolio-card-animation bg-white card-shadow">
+//           <div class="text-2xl font-bold mb-2 roman-font-without-shadow text-[2rem]">Appointo</div>
+//           <div class="font-bold">Appointment Booking System</div>
+//           <div class="py-5">
+//             Schedule appointments effortlessly with live slot sync,
+//             user-friendly dashboards, and auto-reminders.
+//             Schedule appointments effortlessly with live slot sync,
+//             user-friendly dashboards, and auto-reminders.
+//           </div>
+//           <div class="">
+//             <ul class="list-disc list-inside">
+//               <li>Role-based dashboards</li>
+//               <li>Calendar view</li>
+//               <li>Email alerts</li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+
+//   <div class="px-10 md:px-34 mt-14">
+//     <div class="grid grid-cols-2 gap-14">
+//       <div data-aos="fade-right">
+//         <div class="col-span-1 rounded-md p-8 portfolio-card-animation bg-white card-shadow">
+//           <div class="text-2xl font-bold mb-2 roman-font-without-shadow text-[2rem]">Brokitho</div>
+//           <div class="font-bold">Clinic Management System</div>
+//           <div class="py-5">
+//             Schedule appointments effortlessly with live slot sync,
+//             user-friendly dashboards, and auto-reminders.
+//             Schedule appointments effortlessly with live slot sync,
+//             user-friendly dashboards, and auto-reminders.
+//           </div>
+//           <div class="">
+//             <ul class="list-disc list-inside">
+//               <li>Role-based dashboards</li>
+//               <li>Calendar view</li>
+//               <li>Email alerts</li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//       <div class="col-span-1 grid grid-cols-2 gap-2">
+//         <div class="col-span-1 h-60 bg-white overflow-hidden rounded-md">
+//           <img src="project1.jpg" alt="Project" class="object-cover">
+//         </div>
+//         <div class="col-span-1 h-60 bg-white overflow-hidden rounded-md">
+//           <img src="project2.jpg" alt="Project" class="object-cover">
+//         </div>
+//         <div class="col-span-2 h-min flex flex-wrap justify-evenly" data-aos="zoom-up">
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">Angular</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">.NET Core</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">PostgreSQL</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">TailwindCSS</div>
+//           <div class="border border-[#0303022d] rounded-full px-4 py-2 hover:bg-[#030302] hover:text-white hover:cursor-pointer">Auth0</div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>  
+// </div>  
+
+// <!-- Testimonials -->
+// <div class="overflow-hidden">
+//   <div id="Testimonials" class="mt-16 px-10 md:px-34 text-[7rem] text-end roman-font" data-aos="fade-left">
+//     Testimonials
+//   </div>
+// </div>
+// <div class="px-10 md:px-34">
+//   <div class="grid grid-cols-3 gap-14">
+
+//     <div data-aos="fade-up">
+//       <div class="col-span-1 card-shadow rounded-md px-6 py-10 bg-white transition-transform duration-300 hover:scale-105 hover:bg-[#fcb042]">
+//         <div>
+//           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+//             <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+//           </svg>
+//         </div>
+//         <div class="mt-5 italic">
+//           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fugit est tempore esse vero maxime velit, impedit itaque harum rem quam voluptates, voluptate debitis? Quo commodi vero non quisquam porro?
+//         </div>
+//         <div class="text-end mt-5 font-bold">
+//           Harsh Parihar<br>
+//           JPR Systems Pvt. Ltd.
+//         </div>
+//       </div>
+//     </div>
+
+//     <div data-aos="fade-up" data-aos-delay="200">
+//       <div class="col-span-1 card-shadow rounded-md px-6 py-10 bg-white transition-transform duration-300 hover:scale-105 hover:bg-[#fcb042]">
+//         <div>
+//           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+//             <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+//           </svg>
+//         </div>
+//         <div class="mt-5 italic">
+//           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fugit est tempore esse vero maxime velit, impedit itaque harum rem quam voluptates, voluptate debitis? Quo commodi vero non quisquam porro?
+//         </div>
+//         <div class="text-end mt-5 font-bold">
+//           Kamal Verma<br>
+//           JPR Systems Pvt. Ltd.
+//         </div>
+//       </div>
+//     </div>
+
+//     <div data-aos="fade-up" data-aos-delay="400">
+//       <div class="col-span-1 card-shadow rounded-md px-6 py-10 bg-white transition-transform duration-300 hover:scale-105 hover:bg-[#fcb042]">
+//         <div>
+//           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+//             <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+//           </svg>
+//         </div>
+//         <div class="mt-5 italic">
+//           Working with Rahul was always smooth — he just gets things done without overcomplicating anything. Whether it was debugging some tricky issue or picking up tasks last-minute, I could always count on him. He’s one of those people who quietly take ownership and make a difference. Would definitely love to collaborate again if the chance comes up.
+//         </div>
+//         <div class="text-end mt-5 font-bold">
+//           Pradeep Singh Chundawat<br>
+//           JPR Systems Pvt. Ltd.
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+
+// <!-- Blogs -->
+// <div class="overflow-hidden">
+//   <div id="Blogs" class="px-10 md:px-34 mt-16 text-[7rem] roman-font" data-aos="fade-right">
+//     Blogs
+//   </div>
+// </div>
+// <div class="px-10 md:px-34">
+//   <div class="grid grid-cols-2 gap-10">
+//     <div class="col-span-2 grid grid-cols-1 gap-14">
+
+//       <div data-aos="fade-left">
+//         <div class="col-span-1 flex bg-white rounded-md card-shadow overflow-hidden transform hover:scale-105 transition-transform duration-300">
+//           <div class="w-full">
+//             <img src="appointment1.jpg" alt="appointment1" class="object-cover">
+//           </div>
+//           <div class="px-6 py-10">
+//             <div class="roman-font-without-shadow text-[2rem] leading-none">
+//               How to Build a Secure Appointment Booking System for Clinics and Hospitals
+//             </div>
+//             <div class="mt-5">
+//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//               Lorem ipsum dolor sit amet consectetur elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div data-aos="fade-left">
+//         <div class="col-span-1 flex bg-white rounded-md card-shadow overflow-hidden transform hover:scale-105 transition-transform duration-300">
+//           <div class="w-full">
+//             <img src="hippa1.jpg" alt="appointment1" class="object-cover">
+//           </div>
+//           <div class="px-6 py-10">
+//             <div class="roman-font-without-shadow text-[2rem] leading-none">
+//               Why HIPAA Compliance Matters in Healthcare Apps (And How to Achieve It)
+//             </div>
+//             <div class="mt-5">
+//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//               Lorem ipsum dolor sit amet consectetur elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div data-aos="fade-left">
+//         <div class="col-span-1 flex bg-white rounded-md card-shadow overflow-hidden transform hover:scale-105 transition-transform duration-300">
+//           <div class="w-full">
+//             <img src="outdated2.jpg" alt="appointment1" class="object-cover">
+//           </div>
+//           <div class="px-6 py-10">
+//             <div class="roman-font-without-shadow text-[2rem] leading-none">
+//               The Hidden Costs of Ignoring Tech in Your Healthcare Practice
+//             </div>
+//             <div class="mt-5">
+//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//               Lorem ipsum dolor sit amet consectetur elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div data-aos="fade-left">
+//         <div class="col-span-1 flex bg-white rounded-md card-shadow overflow-hidden transform hover:scale-105 transition-transform duration-300">
+//           <div class="w-full">
+//             <img src="seo1.jpg" alt="appointment1" class="object-cover">
+//           </div>
+//           <div class="px-6 py-10">
+//             <div class="roman-font-without-shadow text-[2rem] leading-none">
+//               How Technology Can Reduce No-Shows and Improve Patient Engagement
+//             </div>
+//             <div class="mt-5">
+//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//               Lorem ipsum dolor sit amet consectetur elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut reiciendis ut quisquam magnam voluptas nisi beatae mollitia. Nobis at, quas corrupti dicta blanditiis illum iusto fugit repellendus quia unde quis!
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+
+// <!-- Contact -->
+// <div class="overflow-hidden">
+//   <di-v id="Contact" class="px-10 md:px-34 mt-16 text-[7rem] roman-font text-end" data-aos="fade-left">
+//     Contact
+//   </div>
+// </div>
+// <div class="px-10 md:px-34 pb-24">
+//   <div class="grid grid-cols-12 gap-14">
+//     <div class="h-[100%] pl-16 col-span-6 flex justify-around card-shadow bg-white rounded-md p-10 contact-form-background" data-aos="fade-up">
+//       <div class="w-full grid grid-cols-2 gap-5">
+//         <div class="col-span-1">
+//           <input type="text" id="name" autocomplete="off" placeholder="Name" class="px-5 py-2 w-full bg-white rounded-md p-2 focus:outline-none focus:shadow-md">
+//         </div>
+//         <div class="col-span-1">
+//           <input type="email" id="email" autocomplete="off" placeholder="Email" class="px-5 py-2 w-full bg-white rounded-md p-2 focus:outline-none focus:shadow-md">
+//         </div>
+//         <div class="col-span-2">
+//           <div class="flex flex-col gap-2">
+//             <textarea id="message" autocomplete="off" placeholder="Message" class="resize-none px-5 py-2 w-full h-20 bg-white rounded-md p-2 focus:outline-none focus:shadow-md"></textarea>
+//           </div>
+//           <div class="flex justify-end mt-6">
+//             <button class="button-animation bg-[#030302] text-white px-8 py-2 rounded-md font-bold">Contact Me</button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+
+//     <div class="h-[100%] grid grid-cols-2 col-span-6 card-shadow bg-white rounded-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+
+//       <div class="col-span-1 flex flex-col justify-between px-10 py-10">
+//         <div>rahulvishwa1403&commat;gmail.com</div>
+//         <div>+91-9664026341</div>
+//         <div class="flex flex-wrap gap-2 mt-4">
+//           <div class="h-min border border-[#0303022d] hover:bg-[#030302] hover:text-white hover:cursor-pointer rounded-full px-4 py-2 button-animation">LinkedIn</div>
+//           <div class="h-min border border-[#0303022d] hover:bg-[#030302] hover:text-white hover:cursor-pointer rounded-full px-4 py-2 button-animation">Facebook</div>
+//           <div class="h-min border border-[#0303022d] hover:bg-[#030302] hover:text-white hover:cursor-pointer rounded-full px-4 py-2 button-animation">GitHub</div>
+//           <div class="h-min border border-[#0303022d] hover:bg-[#030302] hover:text-white hover:cursor-pointer rounded-full px-4 py-2 button-animation">Gmail</div>
+//         </div>
+//       </div>
+    
+//       <div class="">
+//         <img src="contact2.jpg" alt="Contact Me" class="object-cover" />
+//       </div>
+//     </div>
+    
+//   </div>
+// </div>

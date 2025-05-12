@@ -1,0 +1,70 @@
+.background-image{
+    background-image: url('../../public/profile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.gradient-background{
+    background-color: #f9ac41;
+}
+.button-animation{
+    transition: all 0.2s ease;
+}
+.button-animation:hover{
+    transform: scale(1.05);
+}
+.button-animation:active{
+    transform: scale(0.95);
+}
+.card-animation{
+    transition: all -0.2s ease;
+    position: relative;
+}
+.card-animation:hover{
+    transform: scale(1.05);
+    transform-origin: center;
+    z-index: 10;
+    background-color: #fcb042;
+    border-radius: 5%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.card-shadow{
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.card-shadow img{
+    transition: all 0.3s ease;
+}
+.card-shadow .card-description-animation{
+    position: absolute;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+.card-shadow:hover .card-description-animation{
+    transform: translateY(0);
+}
+
+.card-background-image{
+    background-image: url('../../public/cardbackground4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.portfolio-card-animation{
+    transition: all 0.2s ease;
+    position: relative;
+}
+.portfolio-card-animation:hover{
+    transform: scale(1.02);
+    transform-origin: center;
+    z-index: 10;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-background{
+    background-image: url('../../public/contactform4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
